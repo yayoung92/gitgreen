@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import db.DBConnection;
 import info.User;
 
-class Login {
+public class Login {
 
-	public static int login(String name, String pw) {
+	public int login(String name, String pw) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

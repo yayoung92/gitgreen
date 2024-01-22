@@ -11,6 +11,8 @@ public class Controller {
 		User user = new User();
 		Person p = new Person();
 		Login login = new Login();
+		Search search = new Search();
+		
 		boolean check = true;
 		int start = 0;
 
@@ -122,6 +124,10 @@ public class Controller {
 						case 5:
 							// 검색하는 부분
 							System.out.println("<5.검색하기>");
+							System.out.println("검색어를 입력하세요 : ");
+							String keyword = scan.next();
+							search.searchData(keyword);
+							
 							break;
 						case 6:
 							// 종료하는 부분
