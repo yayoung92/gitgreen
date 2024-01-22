@@ -5,7 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import db.DBConnection;
-import info.Person;
 import info.User;
 
 class Login {
@@ -53,6 +52,7 @@ class Join {
 			pstmt.setString(1, name);
 			pstmt.setString(2, pw);
 			pstmt.executeUpdate();
+			
 			
 		} catch(Exception e) {
 			e.printStackTrace();
