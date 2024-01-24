@@ -1,27 +1,42 @@
 package org.example;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import util.MyCLI;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+
         MemberDB md = new MemberDB();
+      //  boolena result = true;
 
-        System.out.println("이메일을 입력하세요. : ");
-        String email = scan.nextLine();
+        while(true){
+            int select = printMenu();
+            if(select==1) {
+                md.insert();
+            }
+            else if(select==2){
+                md.login();
 
-        System.out.println("주소를 입력하세요. : ");
-        String address = scan.nextLine();
+            }
+            else if(select ==6) {
+                System.out.println("종료됩니다.");
+                // break 하고 같은 것임.
+                System.exit(0);
+            }
+        }
 
-        System.out.println("이름을 입력하세요. : ");
-        String name = scan.nextLine();
+    }
 
-        System.out.println("패스워드를 입력하세요. : ");
-        String password = scan.nextLine();
-
-        Member member = new Member(email, name, address, password);
-        md.insert(member);
+    public static int printMenu(){
+        System.out.println("1.회원가입");
+        System.out.println("2.로그인");
+        System.out.println("3.물품보기");
+        System.out.println("4.장바구니");
+        System.out.println("5.주문목록");
+        System.out.println("6.종료");
+        Scanner scanner = new Scanner(System.in);
+        int menu = scanner.nextInt();
+        return menu;
     }
 }
