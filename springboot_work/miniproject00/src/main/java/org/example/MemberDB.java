@@ -58,7 +58,7 @@ public class MemberDB {
         return false;
     }
 
-    public boolean login() {
+    public Member login() {
         Member member = cli.loginMember();
         try{
             Connection conn = DriverManager.getConnection(DBINFO.url, DBINFO.user, DBINFO.password);
@@ -69,14 +69,12 @@ public class MemberDB {
             ResultSet rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                System.out.println("로그인되었습니다.");
-                return true;
-
+                member.setRole(rs.getString("role"));
+               return member;
             }
         }catch (Exception e){
             e.printStackTrace();
         }
-        System.out.println("회원정보가 없습니다.");
-        return false;
+        return null;
     }
 }

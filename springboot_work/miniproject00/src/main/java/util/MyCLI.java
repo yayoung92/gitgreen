@@ -21,7 +21,13 @@ public class MyCLI {
         System.out.println("패스워드를 입력하세요. : ");
         String password = scan.nextLine();
 
-        return new Member(email, name, address, password);
+    // return new Member(email, null, null, password); 와 같음
+        return Member.builder()
+                .email(email)
+                .password(password)
+                .name(name)
+                .address(address)
+                .build();
     }
 
     public Member loginMember(){
@@ -33,6 +39,10 @@ public class MyCLI {
         System.out.println("패스워드를 입력하세요. : ");
         String password = scan.nextLine();
 
-        return new Member(email, null, null, password);
+        //return new Member(email, null, null, password);
+        return Member.builder()
+                .email(email)
+                .password(password)
+                .build();
     }
 }
