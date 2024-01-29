@@ -1,7 +1,9 @@
 package org.example;
 
-import util.Login;
-import util.MyCLI;
+import org.example.item.ItemDB;
+import org.example.member.Member;
+import org.example.member.MemberDB;
+import org.example.util.Login;
 
 import java.util.Scanner;
 
@@ -9,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
 
         MemberDB md = new MemberDB();
-      //  boolean result = true;
+        ItemDB id = new ItemDB();
 
         while(true){
             int select = 0;
@@ -33,13 +35,30 @@ public class Main {
                     System.out.println("이미 로그인하셨습니다.");
                 }
             }
-            else if(select ==6) {
+            else if(select ==3){
+                if(!Login.login){
+                    System.out.println("로그인 하셔야 로그아웃 할 수 있습니다.");
+                } else{
+                    Login.login = false;
+                    Login.member = null;
+                    System.out.println("로그아웃 하셨습니다.");
+                }
+            }
+            else if(select ==7) {
                 System.out.println("종료됩니다.");
                 // break 하고 같은 것임.
                 System.exit(0);
             }
+            else if(select==8 && Login.member != null && Login.getRole().equalsIgnoreCase("admin")){
+                try{
+                    id.insert();
+                    System.out.println("상품등록되었습니다.");
+                } catch (Exception e){
+                    e.printStackTrace();
+                    System.out.println("상품등록실패");
+                }
+            }
         }
-
     }
 
     // user 로 로그인 하면 상품 등록 x

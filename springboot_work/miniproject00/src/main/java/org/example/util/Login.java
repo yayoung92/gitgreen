@@ -1,7 +1,8 @@
-package util;
+package org.example.util;
 
-import org.example.Member;
-
+import lombok.Data;
+import org.example.member.Member;
+@Data
 public class Login {
     // DBmember 내용을 저장
     public static Member member;
