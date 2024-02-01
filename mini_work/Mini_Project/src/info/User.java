@@ -1,32 +1,38 @@
 package info;
 
 public class User {
-	public static int idx;
-	public static String userId;
-	public static String userPassword;
+	public int idx;
+	public String userId;
+	public String userPassword;
 	
-	public static int getIdx() {
+	public User() {}
+	public User(String userId, String userPassword) {
+		this.userId = userId;
+		this.userPassword = userPassword;
+	}
+	
+	public int getIdx() {
 		return idx;
 	}
-	public static void setIdx(int idx) {
-		User.idx = idx;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
-	public static String getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	public static void setUserId(String userId) {
-		User.userId = userId;
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
-	public static String getUserPassword() {
+	public String getUserPassword() {
 		return userPassword;
 	}
-	public static void setUserPassword(String userPassword) {
-		User.userPassword = userPassword;
+	public void setUserPassword(String userPassword) {
+		this.userPassword = userPassword;
 	}
 	@Override
 	public String toString() {
-		return "User [getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
-				+ "]";
+		return "User [idx=" + idx + ", userId=" + userId + ", userPassword=" + userPassword + "]";
 	}
+	
 
 }

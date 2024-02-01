@@ -1,4 +1,4 @@
-package mini;
+package greenMinigroup4;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.util.Scanner;
 
 import db.DBConnection;
-import greenMinigroup4.ConsoleTextColor;
 import info.User;
 
 public class Login {

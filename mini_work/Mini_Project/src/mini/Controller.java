@@ -2,6 +2,14 @@ package mini;
 
 import java.util.Scanner;
 
+import greenMinigroup4.CategorySearch;
+import greenMinigroup4.ConsoleTextColor;
+import greenMinigroup4.Delete;
+import greenMinigroup4.G_Test;
+import greenMinigroup4.Insert;
+import greenMinigroup4.List;
+import greenMinigroup4.Search;
+import greenMinigroup4.Update;
 import info.Person;
 import info.User;
 
@@ -9,23 +17,33 @@ public class Controller {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		User user = new User();
-		Person p = new Person();
+		Person person = new Person();
 		Login login = new Login();
 		Search search = new Search();
-		
+
+		Insert insert = new Insert();
+		Update update = new Update();
+		List list = new List();
+
+		Delete delete = new Delete();
+
+		G_Test g_test = new G_Test();
+
+		CategorySearch categorysearch = new CategorySearch();
+
 		boolean check = true;
-		int start = 0;
+		String start = null;
 
 		System.out.println("******************************************");
 		System.out.println("*             주소록 관리 프로그램             *");
 		System.out.println("******************************************");
-		
-		while (true) {
+
+		start: while (true) {
 			System.out.println("------------------------------------------");
 			System.out.println(" 1. 로그인           ||  2. 회원가입      ");
-			start = scan.nextInt();
+			start = scan.next();
 
-			if (start == 1) {
+			if (start.equals("1")) {
 				System.out.println("------------------------------------------");
 				System.out.println("          <      로그인 하기      >          ");
 				System.out.print("  ●  아이디를 입력하세요: ");
@@ -58,108 +76,107 @@ public class Controller {
 						switch (num) {
 						case 1:
 							System.out.println("<1.리스트>");
-							// 회원 리스트 나온다.
 							System.out.println();
-							if (Person.getPersonName() == null) {
-								System.out.println("   등록된 사람이 없습니다.  ");
-							} else {
-								int n = 0;
-								n++;
-								System.out
-										.println(num + ". " + Person.getPersonName() + " : " + Person.getPhoneNumber());
-							}
 
-							break;
-						case 2:
-							// 등록하는 입력 창
+						case 2: // 등록하는 입력 창
 
 							System.out.println("<2.등록하기>");
 							System.out.println();
 
-							System.out.print(" -  이름 : ");
-							Person.setPersonName(scan.next());
-
-							System.out.print(" -  전화번호( - 포함해서 입력해주세요) : ");
-							Person.setPhoneNumber(scan.next());
-
-							System.out.print(" -  나이 : ");
-							Person.setAge(scan.nextInt());
-
-							System.out.print(" -  생일 : ");
-							Person.setDate(scan.next());
-
-							System.out.print(" -  MBTI : ");
-							Person.setMBTI(scan.next());
-
-							System.out.print(" -  성별 : ");
-							Person.setGender(scan.next());
-
-							System.out.print(" -  별명 : ");
-							Person.setStar(scan.next());
-
-							System.out.println();
-							System.out.println(p.toString());
-							System.out.println();
-							System.out.println(" [ 등록되었습니다. ] ");
+							int Insertidx = insert.idx(id);
+							insert.insert(person, Insertidx);
 
 							break;
-						case 3:
-							// 수정하는 부분
+
+						case 3:// 수정하는 부분
+
 							System.out.println("<3.수정하기>");
 							System.out.println();
-
-							System.out.println(" 이름 수정하기 = " + Person.getPersonName() + " -> ");
-							Person.setPersonName(scan.next());
 
 							System.out.println();
 							System.out.println(" [ 수정되었습니다. ] ");
 							break;
+
 						case 4:
 							// 삭제하는 부분
 							System.out.println("<4.삭제하기>");
 							System.out.println();
 
-							System.out.println(" [ 삭제되었습니다. ] ");
+							if (delete.deleteperson(delete.selectIdx(id)) == 1) {
+								System.out.println(" [ 삭제되었습니다. ] ");
+							} else if (delete.deleteperson(delete.selectIdx(id)) == 0) {
+								System.out.println("주소록에 없는 사람입니다.");
+							}
+
 							break;
 						case 5:
-							// 검색하는 부분
+							int u_idx = insert.idx(id);
+
 							System.out.println("<5.검색하기>");
-							System.out.println("검색어를 입력하세요 : ");
-							String keyword = scan.next();
-						//	search.searchData(keyword);
-							
+
+							System.out.print("  ●  이름을 입력하세요: ");
+							String name = scan.next();
+
+							search.searchDetail(name, u_idx);
+
 							break;
 						case 6:
 							// 종료하는 부분
 							System.out.println();
 							break stop;
+
 						case 7:
 							// 설정하는 부분
 							System.out.println("<7.설정>");
 							System.out.println();
+							System.out.println("1.탈퇴하기  2.user 수정하기  3.로그아웃");
+							System.out.print("번호 선택  :  ");
+							num = scan.nextInt();
 
+							if (num == 1) {
+								System.out.print("id 를 입력해주세요 : ");
+								id = scan.next();
+								System.out.print("비밀번호 를 입력해주세요 : ");
+								password = scan.next();
+
+								delete.deleteIdxPerson(delete.selectIdx(id));
+								if (delete.delete(id, password) == 1) {
+									System.out.println();
+									System.out.println("------------------------------------------");
+									System.out.println("회원정보가 삭제되었습니다.");
+									System.out.println("안녕히 가세요.");
+									System.out.println("------------------------------------------");
+									System.out.println("******************************************");
+									break start;
+								} else if (delete.delete(id, password) == 0) {
+									System.out.println("회원정보가 일지하지 않습니다.");
+								}
+							} else if (num == 2) {
+								//  회원정보 수정하기
+
+								break stop;
+							} else if (num == 3) {
+								ConsoleTextColor.printColorln("로그아웃 되었습니다.", "purple");
+
+								break stop;
+							} else
+								System.err.println("잘못 눌렀습니다.");
 							break;
 						default:
+							System.err.println("잘못 입력했습니다.");
 							break;
 						}
 					}
-					System.out.println("종료되었습니다.");
 
 				}
 
-			} else if(start==2) {
+			} else if (start.equals("2")) {
 				System.out.println("    >>>>   회원가입  하기   <<<<   ");
-				System.out.println("  ●  아이디를 입력하세요: ");
-				String newId = scan.next();
-				
-				System.out.println("  ●  비밀번호를 입력하세요: ");
-				String newPassword = scan.next();
-				
-				Join.join(newId, newPassword);
-				
-			}
+				login.join();
+			} else
+				System.err.println("잘못 입력했습니다.");
 		}
-		// 로그인 실패했을 경우
 
 	}
+
 }

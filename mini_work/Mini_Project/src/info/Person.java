@@ -1,66 +1,103 @@
 package info;
 
 public class Person {
-	public static String personName;
-	public static String phoneNumber;
-	public static String date;
-	public static int age;
-	public static String MBTI;
-	public static String address;
-	public static String gender;
-	public static String star;
+	public int idx;
+	public String name;
+	public int age;
+	public String gender;
+	public String phoneNumber;
+	public String MBTI;
+	public String address;
+	public String nickName;
+	public String category;
+	public int u_idx;
+
+	public Person(){
+		
+	}
 	
-	public static String getPersonName() {
-		return personName;
+	public Person(String name, int age, String gender, String phoneNumber, String MBTI, String address, String nickName, String category, int u_idx){
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.phoneNumber = phoneNumber;
+		this.MBTI = MBTI;
+		this.address = address;
+		this.nickName = nickName;
+		this.category = category;
+		this.u_idx = u_idx;
 	}
-	public static void setPersonName(String personName) {
-		Person.personName = personName;
+	
+	public int getIdx() {
+		return idx;
 	}
-	public static String getPhoneNumber() {
-		return phoneNumber;
+	public void setIdx(int idx) {
+		this.idx = idx;
 	}
-	public static void setPhoneNumber(String phoneNumber) {
-		Person.phoneNumber = phoneNumber;
+	public String getName() {
+		return name;
 	}
-	public static String getDate() {
-		return date;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public static void setDate(String date) {
-		Person.date = date;
-	}
-	public static int getAge() {
+	public int getAge() {
 		return age;
 	}
-	public static void setAge(int age) {
-		Person.age = age;
+	public void setAge(int age) {
+		this.age = age;
 	}
-	public static String getMBTI() {
-		return MBTI;
-	}
-	public static void setMBTI(String mBTI) {
-		MBTI = mBTI;
-	}
-	public static String getAddress() {
-		return address;
-	}
-	public static void setAddress(String address) {
-		Person.address = address;
-	}
-	public static String getGender() {
+	public String getGender() {
 		return gender;
 	}
-	public static void setGender(String gender) {
-		Person.gender = gender;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public static String getStar() {
-		return star;
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
-	public static void setStar(String star) {
-		Person.star = star;
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
+	public String getMBTI() {
+		return MBTI;
+	}
+	public void setMBTI(String mBTI) {
+		MBTI = mBTI;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getNickName() {
+		return nickName;
+	}
+	public void setNickName(String nickName) {
+		this.nickName = nickName;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	public int getU_idx() {
+		return u_idx;
+	}
+	public void setU_idx(int u_idx) {
+		this.u_idx = u_idx;
+	}
+
+//	@Override
+//	public String toString() {
+//		return "Person [idx=" + idx + ", name=" + name + ", age=" + age + ", gender=" + gender + ", phoneNumber="
+//				+ phoneNumber + ", MBTI=" + MBTI + ", address=" + address + ", nickName=" + nickName + ", category="
+//				+ category + ", u_idx=" + u_idx + "]";
+//	}
+	
 	@Override
 	public String toString() {
-		return "[이름 = " + getPersonName() + ", 전화번호 = " + getPhoneNumber() + ", 나이 = " + getAge() + ", 생일 = " + getDate() + ", MBTI = " + getMBTI() + ", 성별 = " + getGender() + ", 별명 = " + getStar()
-				+ "]";
+	    return "";
 	}
 }
