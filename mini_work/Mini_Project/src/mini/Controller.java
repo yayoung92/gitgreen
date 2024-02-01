@@ -126,7 +126,7 @@ public class Controller {
 							System.out.println("<5.검색하기>");
 							System.out.println("검색어를 입력하세요 : ");
 							String keyword = scan.next();
-							search.searchData(keyword);
+						//	search.searchData(keyword);
 							
 							break;
 						case 6:
