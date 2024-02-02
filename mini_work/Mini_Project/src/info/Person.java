@@ -1,6 +1,7 @@
 package info;
 
 public class Person {
+	
 	public int idx;
 	public String name;
 	public int age;

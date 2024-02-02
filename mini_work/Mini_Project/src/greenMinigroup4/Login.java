@@ -26,7 +26,9 @@ public class Login {
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
-				
+				if(!rs.getString("u_password").equals(pw)) {
+					System.out.println("비밀번호가 틀렸습니다.");
+				}
 
 			}else {
 				ConsoleTextColor.printColorln("회원정보가 없습니다.", "green");

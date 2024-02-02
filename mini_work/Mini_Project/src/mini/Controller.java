@@ -101,12 +101,8 @@ public class Controller {
 							// 삭제하는 부분
 							System.out.println("<4.삭제하기>");
 							System.out.println();
-
-							if (delete.deleteperson(delete.selectIdx(id)) == 1) {
-								System.out.println(" [ 삭제되었습니다. ] ");
-							} else if (delete.deleteperson(delete.selectIdx(id)) == 0) {
-								System.out.println("주소록에 없는 사람입니다.");
-							}
+							
+							delete.deleteChoice(id);
 
 							break;
 						case 5:
