@@ -28,6 +28,9 @@ public class Person {
 		this.category = category;
 		this.u_idx = u_idx;
 	}
+	public Person(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 	
 	public int getIdx() {
 		return idx;

@@ -14,4 +14,5 @@ public class Member {
     private String address;
     private String password;
     private String role;
+    private long member_id;
 }

@@ -69,6 +69,8 @@ public class MemberDB {
 
             if (rs.next()) {
                 member.setRole(rs.getString("role"));
+                member.setMember_id(rs.getLong("member_id"));
+                member.setAddress(rs.getString("address"));
                 member.setName(rs.getString("name"));
                 return member;
             }else{
