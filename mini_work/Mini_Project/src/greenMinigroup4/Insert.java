@@ -35,46 +35,57 @@ public class Insert {
 	}
 			
 
-	public void insert(Person person, int InsertIdx) {
+	public void insert(Person person, int InsertIdx) { // 등록하는 부분
 		Connection conn = null;
 		PreparedStatement pstmt = null;
-		boolean result = Find(person.getPhoneNumber());
+		Scanner scanner = new Scanner(System.in);
 
-		if (!result) {
+		Person p = new Person();
+		System.out.print(" -  이름 : ");
+		p.setName(scanner.next());
+		System.out.print(" -  나이 : ");
+		p.setAge(scanner.nextInt());
+		System.out.print(" -  성별 : ");
+		p.setGender(scanner.next());
+		System.out.print(" -  전화번호 : ");
+		p.setPhoneNumber(scanner.next());
+		System.out.print(" -  MBTI : ");
+		p.setMBTI(scanner.next());
+		System.out.print(" -  주소 : ");
+		p.setAddress(scanner.next());
+		System.out.print(" -  별명 : ");
+		p.setNickName(scanner.next());
+		System.out.print(" -  카테고리 : ");
+		p.setCategory(scanner.next());
+
+		boolean result = Find(p.getPhoneNumber());
+
+		if (result == false) {
 			try {
 				conn = DBConnection.getConnection();
 				String sql = "insert into person "
 						+ "(name, age, gender, phoneNumber, MBTI, address, nickName, category, u_idx) "
 						+ "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 				pstmt = conn.prepareStatement(sql);
-				Scanner scanner = new Scanner(System.in);
 
-				System.out.print(" -  이름 : ");
-				pstmt.setString(1, scanner.next());
-				System.out.print(" -  나이 : ");
-				pstmt.setString(2, scanner.next());
-				System.out.print(" -  성별 : ");
-				pstmt.setString(3, scanner.next());
-				System.out.print(" -  전화번호 : ");
-				pstmt.setString(4, scanner.next());
-				System.out.print(" -  MBTI : ");
-				pstmt.setString(5, scanner.next());
-				System.out.print(" -  주소 : ");
-				pstmt.setString(6, scanner.next());
-				System.out.print(" -  별명 : ");
-				pstmt.setString(7, scanner.next());
-				System.out.print(" -  카테고리 : ");
-				pstmt.setString(8, scanner.next());
-				pstmt.setInt(9,InsertIdx);
+				pstmt.setString(1, p.getName());
+				pstmt.setInt(2, p.getAge());
+				pstmt.setString(3, p.getGender());
+				pstmt.setString(4, p.getPhoneNumber());
+				pstmt.setString(5, p.getMBTI());
+				pstmt.setString(6, p.getAddress());
+				pstmt.setString(7, p.getNickName());
+				pstmt.setString(8, p.getCategory());
+				pstmt.setInt(9, InsertIdx);
 				pstmt.executeUpdate();
-				
-				System.out.println(" [ 등록되었습니다. ] ");
+				System.out.println();
+				System.out.println(" [ 등록되었습니다 ] ");
 
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		} else {
-			System.out.println("중복이다 머글아");
+			System.err.println("[ 중복된 전화번호입니다 ]");
 		}
 	}
 

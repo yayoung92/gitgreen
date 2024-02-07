@@ -10,15 +10,16 @@ import org.example.util.Login;
 import java.util.Scanner;
 
 public class Main {
+    // 회원관리 DB
+    public static MemberDB md = new MemberDB();
+    // 상품관리 DB
+    public static ItemDB id = new ItemDB();
+    // 장바구니관리 DB
+    public static CartDB cd = new CartDB();
+    // 주문관리 DB
+    public static OrderDB od = new OrderDB();
+
     public static void main(String[] args) {
-        // 회원관리 DB
-        MemberDB md = new MemberDB();
-        // 상품관리 DB
-        ItemDB id = new ItemDB();
-        // 장바구니관리 DB
-        CartDB cd = new CartDB();
-        // 주문관리 DB
-        OrderDB od = new OrderDB();
 
         while(true){
             int select = 0;
@@ -59,7 +60,8 @@ public class Main {
                     while(true){
                         int cartSelect = printMenuCart();
                         if(cartSelect == 1){
-                            cd.insert();
+                            cd.insert();  //장바구니 만들기
+                            cd.insertItem(); // 장바구니 아이템 넣는 로직 / 없는 상품을 선택할시 등록 종료
                         }
                         else if(cartSelect == 5){
                             System.out.println("장바구니를 종료합니다.");

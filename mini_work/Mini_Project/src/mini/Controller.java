@@ -22,14 +22,13 @@ public class Controller {
 		Search search = new Search();
 
 		Insert insert = new Insert();
-		Update update = new Update();
+		Update up = new Update();
 		List list = new List();
 
 		Delete delete = new Delete();
 
-		G_Test g_test = new G_Test();
-
 		CategorySearch categorysearch = new CategorySearch();
+
 
 		boolean check = true;
 		String start = null;
@@ -75,9 +74,16 @@ public class Controller {
 
 						switch (num) {
 						case 1:
+							
+							String name = null;
+							int u_idx=insert.idx(id);
 							System.out.println("<1.리스트>");
 							System.out.println();
 
+							list.listall(u_idx);
+							
+							break;
+ 
 						case 2: // 등록하는 입력 창
 
 							System.out.println("<2.등록하기>");
@@ -93,6 +99,14 @@ public class Controller {
 							System.out.println("<3.수정하기>");
 							System.out.println();
 
+							System.out.println(" 수정할 사람의 이름을 입력:");
+							String OldName1 = scan.next();
+							System.out.println(" 수정할 사람의 전화번호를 입력:");
+							String OldPhone1 = scan.next();
+							int uIdx1 = insert.idx(id);
+							
+							up.AllUpdate(OldName1, OldPhone1, uIdx1);
+							
 							System.out.println();
 							System.out.println(" [ 수정되었습니다. ] ");
 							break;
@@ -106,14 +120,24 @@ public class Controller {
 
 							break;
 						case 5:
-							int u_idx = insert.idx(id);
-
+							u_idx = insert.idx(id);
+							
 							System.out.println("<5.검색하기>");
+							System.out.println("1.이름으로 검색하기  2.카테고리로 검색하기");
+							num = scan.nextInt();
+							
+							if(num==1) {
+								System.out.print("  ●  이름을 입력하세요: ");
+								name = scan.next();
 
-							System.out.print("  ●  이름을 입력하세요: ");
-							String name = scan.next();
+								search.searchDetail(name, u_idx);
+								
+							}else if(num==2) {
+								System.out.print("  ●  카테고리를 입력하세요: ");
+								name = scan.next();
+								categorysearch.categorysearch(name, u_idx);
+							}
 
-							search.searchDetail(name, u_idx);
 
 							break;
 						case 6:
@@ -125,7 +149,7 @@ public class Controller {
 							// 설정하는 부분
 							System.out.println("<7.설정>");
 							System.out.println();
-							System.out.println("1.탈퇴하기  2.user 수정하기  3.로그아웃");
+							System.out.println("1.탈퇴하기  2.로그아웃");
 							System.out.print("번호 선택  :  ");
 							num = scan.nextInt();
 
@@ -148,10 +172,6 @@ public class Controller {
 									System.out.println("회원정보가 일지하지 않습니다.");
 								}
 							} else if (num == 2) {
-								//  회원정보 수정하기
-
-								break stop;
-							} else if (num == 3) {
 								ConsoleTextColor.printColorln("로그아웃 되었습니다.", "purple");
 
 								break stop;
@@ -168,7 +188,7 @@ public class Controller {
 
 			} else if (start.equals("2")) {
 				System.out.println("    >>>>   회원가입  하기   <<<<   ");
-				login.join();
+				login.join();		
 			} else
 				System.err.println("잘못 입력했습니다.");
 		}

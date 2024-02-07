@@ -15,7 +15,7 @@ public class CategorySearch {
 
 		try {
 			conn = DBConnection.getConnection();
-			String sql = "SELECT * FROM mini WHERE category LIKE ? and u_idx LIKE ?";
+			String sql = "SELECT * FROM person WHERE category LIKE ? and u_idx LIKE ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, category);
 			pstmt.setInt(2, categoryidx);
