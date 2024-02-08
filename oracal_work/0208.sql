@@ -1,0 +1,1 @@
+select avg(신장),이름 as a from 학생 group by 이름;
