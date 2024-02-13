@@ -83,3 +83,4 @@ order by sal desc;
 -- 20 부서번호가 10또는 20인 사원의 이름과 연봉을 구하시오
 select ename, sal from emp
 where deptno in ('10','20');
+
