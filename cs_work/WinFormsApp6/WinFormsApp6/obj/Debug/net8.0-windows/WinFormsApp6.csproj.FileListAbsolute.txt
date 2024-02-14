@@ -1,0 +1,17 @@
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\bin\Debug\net8.0-windows\WinFormsApp6.exe
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\bin\Debug\net8.0-windows\WinFormsApp6.deps.json
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\bin\Debug\net8.0-windows\WinFormsApp6.runtimeconfig.json
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\bin\Debug\net8.0-windows\WinFormsApp6.dll
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\bin\Debug\net8.0-windows\WinFormsApp6.pdb
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.Form1.resources
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.csproj.GenerateResource.cache
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.AssemblyInfoInputs.cache
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.AssemblyInfo.cs
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.csproj.CoreCompileInputs.cache
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.sourcelink.json
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.dll
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\refint\WinFormsApp6.dll
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.pdb
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\WinFormsApp6.genruntimeconfig.cache
+D:\Students\cs_work\WinFormsApp6\WinFormsApp6\obj\Debug\net8.0-windows\ref\WinFormsApp6.dll

@@ -7,9 +7,9 @@ select 소속, round(avg(신장),2) as 평균신장 from 학생 group by 소속;
 -- ex3) 수강테이블에서 학생별 평균성적을 구한후 평균성적이 높은 순서대로 정렬하시오.
 select 학번, avg(성적) from 수강 group by 학번 order by avg(성적) desc;
 
--- ex4) 교수번호 102인 교수가 설강한 과목을 수강하는 학생의 수를 계산하라.
-select count(distinct 학번) from 수강 where 번호='101';
-select count(학번) from 수강 where 번호='101';
+-- ex4) 교수번호 102인 교수가 설강한 과목을 수강하는 학생의 수를 계산하라
+select count(distinct 학번) from 수강 where 번호='102';
+select count(학번) from 수강 where 번호='102';
 
 select * from 수강;
 
@@ -46,10 +46,29 @@ select deptno,round(avg(sal),2) from emp group by deptno having avg(sal)>=2000;
 -- ex12) 급여가 1000이상인 사원들만 부서별 평균급여를 구한 후 부서별 평균 급여가 2000이상인 부서만 부서번호와 부서별 평균급여를 구하시오.
 select deptno, avg(sal) from emp where sal>=1000 group by deptno having avg(sal)>=2000;
 
+-- inner join
 select * from departments;
 select * from emp;
 select deptno from emp where ename='SMITH';
 select * from departments where department_id = 20;
-select * from departments d
-inner join emp e on e.deptno = d.department_id;
+select e.ename,d.department_name from departments d
+inner join emp e on e.deptno = d.department_id
 where e.ename='SMITH';
+select * from emp e
+inner join departments d on e.deptno = d.department_id;
+
+-- left join
+select * from emp e
+left outer join departments d on e.deptno = d.department_id;
+
+select * from departments d
+left outer join emp e on e.deptno = d.department_id;
+
+-- right join
+select * from emp e
+right outer join departments d on e.deptno = d.department_id;
+
+select * from departments d
+right outer join emp e on e.deptno = d.department_id;
+
+commit;
