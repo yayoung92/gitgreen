@@ -30,3 +30,4 @@ D:\Students\cs_work\Mini_bono\Mini_bono\obj\Debug\Mini_bono.csproj.CoreCompileIn
 D:\Students\cs_work\Mini_bono\Mini_bono\obj\Debug\Mini_bono.csproj.CopyComplete
 D:\Students\cs_work\Mini_bono\Mini_bono\obj\Debug\Mini_bono.exe
 D:\Students\cs_work\Mini_bono\Mini_bono\obj\Debug\Mini_bono.pdb
+D:\Students\cs_work\Mini_bono\Mini_bono\obj\Debug\Mini_bono.insert.resources

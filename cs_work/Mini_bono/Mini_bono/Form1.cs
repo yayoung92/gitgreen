@@ -82,25 +82,29 @@ namespace Mini_bono
             string signId = id.Text;
             string signPw = pw.Text;
             string signName = name.Text;
-            Console.WriteLine(signId);
-            Console.WriteLine(signPw);
-            Console.WriteLine(signName);
+
             conn = new OracleConnection(strConnection);
             conn.Open();
+            string sql = "insert into member(id, pw, name, role, resign) " +
+               "values('" + signId + "', '" + signPw + "', '" + signName + "', 'user', 'y')";
+            cmd = new OracleCommand(sql, conn);
 
-            if (success == 1)
+            try
             {
-                string sql = "insert into member(id, pw, name, role, resign) " +
-                               "values('" + signId + "', '" + signPw + "', '" + signName + "', 'user', 'y')";
-                cmd = new OracleCommand(sql, conn);
-                OracleDataReader reader = cmd.ExecuteReader();
-
-                while(reader.Read())
+                if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("회원가입되었습니다.");
+                    MessageBox.Show("환영합니다." + signId + " 님 회원가입 되었습니다.");
+                    Close();   // 회원가입 성공이면 창 닫기
+
                 }
+                else
+                    MessageBox.Show("비정상 입력 정보, 재확인바랍니다.");
+            }catch(Exception ex)
+            {
+                
+                MessageBox.Show("아이디 중복입니다. 재확인바랍니다.");
             }
-            
+            conn.Close();
         }
     }
 }
