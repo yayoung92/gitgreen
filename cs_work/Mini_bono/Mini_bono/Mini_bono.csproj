@@ -85,6 +85,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="insertWordForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="insertWordForm.Designer.cs">
+      <DependentUpon>insertWordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Signup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     <Compile Include="w_insert.Designer.cs">
       <DependentUpon>w_insert.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="insertWordForm.resx">
+      <DependentUpon>insertWordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Signup.resx">
       <DependentUpon>Signup.cs</DependentUpon>
     </EmbeddedResource>

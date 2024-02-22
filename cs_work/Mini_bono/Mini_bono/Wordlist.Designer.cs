@@ -131,6 +131,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Name = "Wordlist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "insert";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -3,6 +3,7 @@ using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using System.Xml.Linq;
 
 namespace Mini_bono
 {
@@ -12,28 +13,20 @@ namespace Mini_bono
 
         OracleConnection conn;
         OracleCommand cmd;
-
+        
         public w_insert()
         {
             InitializeComponent();
 
-            IndexComboBox(); // 0번째 실행시키는 코드
+            comboBox1.SelectedIndex = 0; // 0번째 실행시키는 코드          
         }
-
-        // comboBox1 0번째 값으로 보여줘라는 코드
-        private void IndexComboBox()
-        {
-            comboBox1.SelectedIndex = 0; 
-        }
-        public string selectGoup_no()
+        public string selectGoup_no()  // 정처기, sqld 중에 선택해서 선택 값 리턴하는 콤보박스1
         {
             string check = "";
             conn = new OracleConnection(strConnection);
             conn.Open();
 
             string c = comboBox1.SelectedItem.ToString();
-          //  Console.WriteLine(c);
-
             string sql = $"select group_detail_no from group_detail where group_detail_name='{c}'";
             cmd = new OracleCommand(sql, conn);
             OracleDataReader reader = cmd.ExecuteReader();
@@ -56,10 +49,10 @@ namespace Mini_bono
             return check;
         }
 
-        private void IndexComboBox2()
+        private void selectComboBox2() // 콤보박스1 의 값에 따라 중분류 과목이 나오는 콤보박스2
         {
             string a = selectGoup_no();
-            Console.WriteLine(a);
+            //   Console.WriteLine(a);
             conn = new OracleConnection(strConnection);
             conn.Open();
 
@@ -69,23 +62,20 @@ namespace Mini_bono
 
             try
             {
-             //      if (!a.Equals("null")) {
-                        List<string> list = new List<string>();
+                List<string> list = new List<string>();
 
-                        while (reader.Read())
-                        {
+                while (reader.Read())
+                {
+                    comboBox2.Items.Clear();
+                    comboBox2.Items.Add("== 선택하세요 ==");
                     
-                            list.Add(reader.GetString(0));
-                        }
-                        //Console.WriteLine(reader["group_detail_name"]);
-                        foreach (string s in list)
-                            {
-                                // Console.WriteLine(s);
-       
-                                comboBox2.Items.Add(s);
-                            } 
-            //        }
-
+                    list.Add(reader.GetString(0));                   
+                }
+                
+                foreach (string s in list)
+                {         
+                    comboBox2.Items.Add(s);
+                }              
             }
             catch (Exception ex)
             {
@@ -95,25 +85,49 @@ namespace Mini_bono
             reader.Close();
             conn.Close();
 
-
-            //    comboBox2.Items.Add("0");
-            //    comboBox2.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+            
         }
-        public void selectdetailName()
+        public void selectedetailName()
         {
+            string word_no = ""; // 정처기, sqld 중 선택
+            string word_name = ""; // word_no 에 따른 값 선택
+
+            if (comboBox1.SelectedIndex != 0 & comboBox2.SelectedIndex != 0)
+            {
+                word_no = comboBox1.SelectedItem.ToString();
+                word_name = comboBox2.SelectedItem.ToString();
+
+                //button1.PerformClick();
+
+            }
+            Console.WriteLine("정처기 또는 sqld : " + word_no);
+            Console.WriteLine("중분류 : " + word_name);
 
         }
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)  // 선택값으로 변하는 
         {
             // 정보처리기사 가 클릭되면 카테고리가 5가지 나오고 , SQLD 면 2가지 나와야 한다.
             selectGoup_no();
-            IndexComboBox2();
-            
+            selectComboBox2();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // IndexComboBox2();
+            selectedetailName();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex != 0 & comboBox2.SelectedIndex != 0)
+            {
+                string w_name = textBox1.Text;
+                string w_content = textBox2.Text;
+                Console.WriteLine("단어명 : " + w_name);
+                Console.WriteLine("단어설명 : " + w_content);
+
+            } else
+                MessageBox.Show("분류를 선택하세요.");
         }
     }
 }
