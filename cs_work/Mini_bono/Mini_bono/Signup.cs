@@ -33,6 +33,7 @@ namespace Mini_bono
 
         }
 
+        //회원가입 시 아이디 중복 체크
         private void check_Click(object sender, EventArgs e)
         {
             string checkId = id.Text;
@@ -72,6 +73,7 @@ namespace Mini_bono
             conn.Close();
         }
 
+        //회원가입 누르는 버튼
         private void signup_Click(object sender, EventArgs e)
         {
             string signId = id.Text;
