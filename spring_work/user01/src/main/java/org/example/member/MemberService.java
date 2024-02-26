@@ -1,8 +1,11 @@
 package org.example.member;
 
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 import java.util.Collection;
 
+@NoArgsConstructor
 public class MemberService {
     private MemberDAO memberDAO;
 
@@ -10,6 +13,9 @@ public class MemberService {
         this.memberDAO = memberDAO;
     }
 
+    public void setMemberDAO(MemberDAO memberDAO){
+        this.memberDAO = memberDAO;
+    }
     public void regist(MemberDTO md) {
 
         Member member = new Member(

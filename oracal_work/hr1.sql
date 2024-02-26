@@ -22,3 +22,15 @@ SELECT TB_SMART_SEQ.NEXTVAL FROM DUAL;
 SELECT TB_SMART_SEQ.CURRVAL FROM DUAL;
 
 INSERT INTO TB_SMART_CRUD VALUES(TB_SMART_SEQ.NEXTVAL,'AAA','BBB','³²');
+
+update tb_smart_crud
+set firstname='aaaaa', lastname='qwerqwer', gender='¿©ÀÚ'
+where autoid=220;
+
+delete tb_smart_crud
+where autoid=2;
+
+select * from tb_smart_crud;
+commit;
+
+select * from tb_smart_crud where concat(fristname, lastname) like 'e' order by autoid desc;
