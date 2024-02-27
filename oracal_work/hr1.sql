@@ -1,3 +1,6 @@
+create user usertodo identified by "123";
+grant connect, resource to usertodo;
+
 CREATE TABLE tb_smart_crud (
   autoid number primary KEY NOT NULL,
   firstname varchar(50) DEFAULT NULL,
