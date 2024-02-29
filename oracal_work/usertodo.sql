@@ -11,3 +11,8 @@ create SEQUENCE usersIdx;
 commit;
 
 insert into users (idx) values (usersIdx.nextval);
+
+select * from users;
+
+
+select usersIdx.currval from dual;
