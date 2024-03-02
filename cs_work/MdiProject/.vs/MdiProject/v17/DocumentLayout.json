@@ -1,0 +1,103 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Students\\cs_work\\MdiProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\user\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\user\\userform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\readme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "README.txt",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\README.txt",
+              "RelativeDocumentMoniker": "MdiProject\\README.txt",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\README.txt",
+              "RelativeToolTip": "MdiProject\\README.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-02-27T06:01:23.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\user\\UserForm.cs",
+              "RelativeDocumentMoniker": "MdiProject\\user\\UserForm.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\user\\UserForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "MdiProject\\user\\UserForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-02-27T05:35:07.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoForm.cs [Design]",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.cs",
+              "RelativeDocumentMoniker": "MdiProject\\todo\\TodoForm.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.cs [Design]",
+              "RelativeToolTip": "MdiProject\\todo\\TodoForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:34:51.954Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\MainForm.cs",
+              "RelativeDocumentMoniker": "MdiProject\\MainForm.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\MainForm.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "MdiProject\\MainForm.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-02-27T05:28:59.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TodoForm.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.cs",
+              "RelativeDocumentMoniker": "MdiProject\\todo\\TodoForm.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.cs",
+              "RelativeToolTip": "MdiProject\\todo\\TodoForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-27T05:51:10.405Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

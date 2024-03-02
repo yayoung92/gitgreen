@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Students\\cs_work\\autoid_crud\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|d:\\students\\cs_work\\autoid_crud\\autoid_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|solutionrelative:autoid_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|solutionrelative:autoid_crud\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|solutionrelative:autoid_crud\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\db\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{76DD6947-0C0A-4533-81E7-AACAB7D51D73}|autoid_crud\\autoid_crud.csproj|solutionrelative:autoid_crud\\db\\crud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 100,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\uB514\uC790\uC778]",
+              "DocumentMoniker": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.cs",
+              "RelativeDocumentMoniker": "autoid_crud\\Form1.cs",
+              "ToolTip": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.cs [\uB514\uC790\uC778]",
+              "RelativeToolTip": "autoid_crud\\Form1.cs [\uB514\uC790\uC778]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T05:34:09.041Z",
+              "EditorCaption": " [\uB514\uC790\uC778]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CRUD.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\db\\CRUD.cs",
+              "RelativeDocumentMoniker": "autoid_crud\\db\\CRUD.cs",
+              "ToolTip": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\db\\CRUD.cs",
+              "RelativeToolTip": "autoid_crud\\db\\CRUD.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T06:01:06.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "autoid_crud\\Form1.Designer.cs",
+              "ToolTip": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.Designer.cs",
+              "RelativeToolTip": "autoid_crud\\Form1.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T05:46:45.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.cs",
+              "RelativeDocumentMoniker": "autoid_crud\\Form1.cs",
+              "ToolTip": "D:\\Students\\cs_work\\autoid_crud\\autoid_crud\\Form1.cs",
+              "RelativeToolTip": "autoid_crud\\Form1.cs",
+              "ViewState": "AQIAAJoAAAAAAAAAAAAgwDoAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T05:39:02.866Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
