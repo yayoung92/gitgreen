@@ -30,4 +30,5 @@ D:\Students\cs_work\MdiProject\MdiProject\bin\Debug\System.Text.Encodings.Web.xm
 D:\Students\cs_work\MdiProject\MdiProject\bin\Debug\System.Text.Json.xml
 D:\Students\cs_work\MdiProject\MdiProject\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Students\cs_work\MdiProject\MdiProject\bin\Debug\System.ValueTuple.xml
-D:\Students\cs_work\MdiProject\MdiProject\obj\Debug\MdiProject.csproj.CopyComplete
+D:\Students\cs_work\MdiProject\MdiProject\obj\Debug\MdiProject.csproj.Up2Date
+D:\Students\cs_work\MdiProject\MdiProject\obj\Debug\MdiProject.todo.TodoForm.resources

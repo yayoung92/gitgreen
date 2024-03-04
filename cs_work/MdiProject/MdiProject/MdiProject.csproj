@@ -94,12 +94,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="todo\Todo.cs" />
     <Compile Include="todo\TodoForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="todo\TodoForm.Designer.cs">
       <DependentUpon>TodoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="todo\TodoDBManager.cs" />
     <Compile Include="user\UserDBManager.cs" />
     <Compile Include="user\UserForm.cs">
       <SubType>Form</SubType>
@@ -120,6 +122,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="todo\TodoForm.resx">
+      <DependentUpon>TodoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="user\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>

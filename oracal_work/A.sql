@@ -1,0 +1,22 @@
+CREATE TABLE USERS 
+(	
+    IDX NUMBER, 
+    EMAIL VARCHAR2(20), 
+    ADDR VARCHAR2(20), 
+    PASSWORD VARCHAR2(20), 
+    NAME VARCHAR2(20)
+) ;
+
+CREATE TABLE TODO 
+(   
+    IDX NUMBER, 
+    USERS_IDX NUMBER, 
+    TITLE VARCHAR2(20), 
+    "CONTENT" VARCHAR2(20), 
+    FINISHDATE DATE
+);
+
+commit;
+
+create SEQUENCE usersIdx;
+select usersIdx.currval from dual;

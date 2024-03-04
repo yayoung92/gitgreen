@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbEmail);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(802, 202);
@@ -83,21 +83,22 @@
             this.panel2.Controls.Add(this.update);
             this.panel2.Controls.Add(this.delete);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(378, 34);
+            this.panel2.Location = new System.Drawing.Point(378, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(421, 165);
+            this.panel2.Size = new System.Drawing.Size(421, 168);
             this.panel2.TabIndex = 1;
             // 
             // textBox4
             // 
-            this.textBox4.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox4.Location = new System.Drawing.Point(115, 35);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(145, 28);
+            this.textBox4.Size = new System.Drawing.Size(145, 26);
             this.textBox4.TabIndex = 19;
             // 
             // select
             // 
+            this.select.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.select.Location = new System.Drawing.Point(266, 29);
             this.select.Name = "select";
             this.select.Size = new System.Drawing.Size(125, 38);
@@ -109,15 +110,16 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(39, 38);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(15, 35);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 21);
+            this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "SEARCH";
             // 
             // insert
             // 
+            this.insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insert.Location = new System.Drawing.Point(19, 103);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(111, 58);
@@ -128,6 +130,7 @@
             // 
             // update
             // 
+            this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(149, 103);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(111, 58);
@@ -138,6 +141,7 @@
             // 
             // delete
             // 
+            this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.Location = new System.Drawing.Point(280, 103);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(111, 58);
@@ -149,73 +153,73 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label4.Location = new System.Drawing.Point(81, 152);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 21);
+            this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "ADDR";
             // 
             // tbAddr
             // 
-            this.tbAddr.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbAddr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbAddr.Location = new System.Drawing.Point(159, 149);
             this.tbAddr.Name = "tbAddr";
-            this.tbAddr.Size = new System.Drawing.Size(145, 28);
+            this.tbAddr.Size = new System.Drawing.Size(145, 26);
             this.tbAddr.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(39, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 21);
+            this.label3.Size = new System.Drawing.Size(111, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "PASSWORD";
             // 
             // tbPassword
             // 
-            this.tbPassword.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbPassword.Location = new System.Drawing.Point(159, 115);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(145, 28);
+            this.tbPassword.Size = new System.Drawing.Size(145, 26);
             this.tbPassword.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(81, 84);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 21);
+            this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "NAME";
             // 
             // tbName
             // 
-            this.tbName.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbName.Location = new System.Drawing.Point(159, 81);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(145, 28);
+            this.tbName.Size = new System.Drawing.Size(145, 26);
             this.tbName.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(81, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 21);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "EMAIL";
             // 
             // tbEmail
             // 
-            this.tbEmail.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.tbEmail.Location = new System.Drawing.Point(159, 47);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(145, 28);
+            this.tbEmail.Size = new System.Drawing.Size(145, 26);
             this.tbEmail.TabIndex = 0;
             // 
             // panel1
@@ -231,7 +235,7 @@
             // 
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Font = new System.Drawing.Font("한컴 말랑말랑 Bold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(802, 272);
@@ -246,11 +250,11 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 34);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 31);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(796, 235);
+            this.dataGridView1.Size = new System.Drawing.Size(796, 238);
             this.dataGridView1.TabIndex = 0;
             // 
             // UserForm
