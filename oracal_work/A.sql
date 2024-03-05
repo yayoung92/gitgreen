@@ -19,4 +19,13 @@ CREATE TABLE TODO
 commit;
 
 create SEQUENCE usersIdx;
+create SEQUENCE todoIdx;
+
+
+INSERT INTO TODO (IDX, USERS_IDX, TITLE, CONTENT, FINISHDATE) 
+VALUES (todoIdx.nextval, 21, '공부', '504호로', TO_DATE(sysdate, 'YYYY-MM-DD HH24:MI:SS'));
+
+select * from users;
+select * from todo;
+
 select usersIdx.currval from dual;
