@@ -29,3 +29,5 @@ select * from users;
 select * from todo;
 
 select usersIdx.currval from dual;
+
+select users_idx from todo minus select idx from users;

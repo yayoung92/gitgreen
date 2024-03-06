@@ -8,7 +8,6 @@ namespace MdiProject.todo
 {
     public class TodoDBManager
     {
-
         public TodoDBManager() { }
         public bool insert(Todo todo)
         {
@@ -54,7 +53,7 @@ namespace MdiProject.todo
             {
                 OracleConnection con = DBINFO.openConnect();
 
-                string sql = "select * from todo";
+                string sql = "select * from todo order by finishdate desc";
 
                 OracleDataAdapter adapter = new OracleDataAdapter();
                 DataSet ds = new DataSet();

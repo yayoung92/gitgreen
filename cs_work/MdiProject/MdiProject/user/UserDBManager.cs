@@ -3,6 +3,7 @@ using Oracle.ManagedDataAccess.Client;
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace MdiProject.user
 {
@@ -68,6 +69,38 @@ namespace MdiProject.user
                 MessageBox.Show(e.Message);
                 return null;
             }            
+        }
+        public List<string> selectUserID()
+        {
+            try
+            {
+                OracleConnection con = DBINFO.openConnect();
+
+                string sql = "select idx from users";
+
+                OracleDataAdapter adapter = new OracleDataAdapter();
+                DataSet ds = new DataSet();
+
+                OracleCommand oracleCommand = new OracleCommand(sql, con);
+                adapter.SelectCommand = oracleCommand;
+
+                adapter.Fill(ds);
+
+                DBINFO.closeConnect();
+
+                List<string> list = new List<string>();
+                foreach(DataRow dr in ds.Tables[0].Rows)
+                {
+                    list.Add(dr["idx"].ToString());
+                }
+                return list;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.StackTrace);
+                MessageBox.Show(e.Message);
+                return null;
+            }
         }
     }
 }

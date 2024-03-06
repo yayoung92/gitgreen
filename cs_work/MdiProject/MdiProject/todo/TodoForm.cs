@@ -13,8 +13,11 @@ namespace MdiProject.todo
 {
     public partial class TodoForm : Form
     {
-        private static TodoDBManager todoDBManager = new TodoDBManager();
         private static TodoForm instance = null;
+
+        private TodoDBManager todoDBManager = new TodoDBManager();
+        private UserDBManager userDBManager = new UserDBManager();
+        
 
         public static TodoForm getInstance()
         {
@@ -32,10 +35,10 @@ namespace MdiProject.todo
         {
             InitializeComponent();
 
-            useridx_comboBox.DataSource = new List<string>()
-            {
-                "1","2","3","4","5"
-            };
+            List<String> list = userDBManager.selectUserID();
+
+            // 사용자 데이터 불러와야 한다.
+            useridx_comboBox.DataSource = list;
             useridx_comboBox.SelectedText = "1";
 
             /*            Label title_lb = new Label();
@@ -52,6 +55,11 @@ namespace MdiProject.todo
 
                         panel1.Controls.Add(resevPanel);*/
 
+            panel1.Controls.Clear(); // panel 안의 내용 삭제하고 todoSelect 하기
+            todoSelect();
+        }
+        public void todoSelect()
+        {
             DataTable dataTable = todoDBManager.select();
 
             int y = 66;
@@ -74,7 +82,7 @@ namespace MdiProject.todo
                 todo.content = content;
                 todo.finishdate = finishdate;
 
-                makeTodoPanel(12, y, todo, evenOdd%2);
+                makeTodoPanel(12, y, todo, evenOdd % 2);
                 evenOdd += 1;
                 y += 200;
             }
@@ -94,6 +102,8 @@ namespace MdiProject.todo
                 MessageBox.Show("입력하였습니다.");
                 title_tb.Text = "";
                 content_tb.Text = "";
+                panel1.Controls.Clear(); // panel 안의 내용 삭제하고 todoSelect 하기
+                todoSelect();
             }
 
         }
@@ -174,7 +184,7 @@ namespace MdiProject.todo
 
             // panel4
             Panel panel4 = new Panel();
-            if(evenOdd%2 ==0)
+            if (evenOdd % 2 == 0)
                 panel4.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             else
                 panel4.BackColor = Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -193,6 +203,17 @@ namespace MdiProject.todo
             panel4.PerformLayout();
 
             this.panel1.Controls.Add(panel4);
+
+            // panel 의 예약 이라는 label 도 같이 없어져서 임의로 넣었다,.
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("함초롬돋움", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(24, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "예약";
+
+            this.panel1.Controls.Add(this.label1);
             #endregion
         }
     }

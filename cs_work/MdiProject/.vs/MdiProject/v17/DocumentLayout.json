@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\Students\\cs_work\\MdiProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\todo\\todoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\user\\userdbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\user\\userdbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|d:\\students\\cs_work\\mdiproject\\mdiproject\\todo\\tododbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\tododbmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|D:\\Students\\cs_work\\MdiProject\\mdiproject\\todo\\todoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E62D462-523F-4EBB-97C6-E1C601CB6A12}|MdiProject\\MdiProject.csproj|solutionrelative:mdiproject\\todo\\todoform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +30,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDBManager.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\user\\UserDBManager.cs",
+              "RelativeDocumentMoniker": "MdiProject\\user\\UserDBManager.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\user\\UserDBManager.cs",
+              "RelativeToolTip": "MdiProject\\user\\UserDBManager.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAFgAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T07:42:32.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TodoDBManager.cs",
+              "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoDBManager.cs",
+              "RelativeDocumentMoniker": "MdiProject\\todo\\TodoDBManager.cs",
+              "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoDBManager.cs",
+              "RelativeToolTip": "MdiProject\\todo\\TodoDBManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T07:34:26.537Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -44,20 +78,20 @@
               "RelativeDocumentMoniker": "MdiProject\\todo\\TodoForm.cs",
               "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.cs",
               "RelativeToolTip": "MdiProject\\todo\\TodoForm.cs",
-              "ViewState": "AQIAAKQAAAAAAAAAAAAgwLYAAAAyAAAA",
+              "ViewState": "AQIAALgAAAAAAAAAAAAgwMkAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-27T05:51:10.405Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TodoForm.Designer.cs",
               "DocumentMoniker": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.Designer.cs",
               "RelativeDocumentMoniker": "MdiProject\\todo\\TodoForm.Designer.cs",
               "ToolTip": "D:\\Students\\cs_work\\MdiProject\\MdiProject\\todo\\TodoForm.Designer.cs",
               "RelativeToolTip": "MdiProject\\todo\\TodoForm.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABAAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAIwEUAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-05T05:31:02.794Z",
               "EditorCaption": ""
