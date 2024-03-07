@@ -31,3 +31,6 @@ select * from todo;
 select usersIdx.currval from dual;
 
 select users_idx from todo minus select idx from users;
+
+INSERT INTO TODO(IDX, USERS_IDX, TITLE, CONTENT, FINISHDATE)
+VALUES (todoIdx.nextval, 42, 'test', 'contentdd', sysdate);
