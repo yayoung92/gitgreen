@@ -71,6 +71,7 @@ namespace MdiProject.todo
                 int idx = int.Parse(row["idx"].ToString());
                 string title = row["title"].ToString();
                 string content = row["content"].ToString();
+
                 DateTime finishdate = new DateTime(
                         int.Parse(row["finishdate"].ToString().Split('-', ' ')[0]),
                         int.Parse(row["finishdate"].ToString().Split('-', ' ')[1]),
@@ -81,6 +82,7 @@ namespace MdiProject.todo
                 todo.title = title;
                 todo.content = content;
                 todo.finishdate = finishdate;
+                todo.name = row["name"].ToString();
 
                 makeTodoPanel(12, y, todo, evenOdd % 2);
                 evenOdd += 1;
@@ -127,6 +129,7 @@ namespace MdiProject.todo
             check_lb.TabIndex = 6;
             check_lb.Text = "완료";
             check_lb.UseVisualStyleBackColor = true;
+            check_lb.Click += Compete_checkbox_Click;   // 체크박스 클릭하면 값 넘기기
 
             // finish_lb_value
             finish_lb_value.AutoSize = true;
@@ -188,6 +191,15 @@ namespace MdiProject.todo
                 panel4.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             else
                 panel4.BackColor = Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+
+            Label namaLabel = new Label();
+            namaLabel.Text = "할사람 : " + todo.name.ToString();
+            namaLabel.AutoSize = true;
+            namaLabel.Location = new Point(130, 40);
+            namaLabel.Font = new Font("함초롬돋움", 10F);
+
+            panel4.Controls.Add(namaLabel);
+
             panel4.Controls.Add(check_lb);
             panel4.Controls.Add(finish_lb_value);
             panel4.Controls.Add(content_lb_value);
@@ -215,6 +227,11 @@ namespace MdiProject.todo
 
             this.panel1.Controls.Add(this.label1);
             #endregion
+        }
+
+        private void Compete_checkbox_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
         }
     }
 }
