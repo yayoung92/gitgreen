@@ -1,7 +1,9 @@
 package com.mh.restapi03.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
@@ -17,8 +19,11 @@ public class UserDTO {
     private Long id;
     @NotBlank   // username 빈값 두지 않겠드아.
     private String username;
+    //@Min(10)  // 최소 10자리 이상 되어야 한다는 유효성 검사
     private String email;
+    //@Min(5)
     private String password;
+    //@NotNull
     private Gender gender;
     @JsonFormat(pattern = "yyy/MM/dd HH:mm:ss")
     private LocalDateTime wdate;

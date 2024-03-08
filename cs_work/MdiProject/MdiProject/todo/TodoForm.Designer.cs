@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.resevePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.complatePanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,21 +43,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.useridx_comboBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.resevePanel.SuspendLayout();
+            this.complatePanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // resevePanel
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(262, 450);
-            this.panel1.TabIndex = 0;
+            this.resevePanel.AutoScroll = true;
+            this.resevePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.resevePanel.Controls.Add(this.label1);
+            this.resevePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.resevePanel.Location = new System.Drawing.Point(0, 0);
+            this.resevePanel.Name = "resevePanel";
+            this.resevePanel.Size = new System.Drawing.Size(262, 450);
+            this.resevePanel.TabIndex = 0;
             // 
             // label1
             // 
@@ -69,15 +69,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "예약";
             // 
-            // panel2
+            // complatePanel
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(262, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(273, 450);
-            this.panel2.TabIndex = 1;
+            this.complatePanel.BackColor = System.Drawing.SystemColors.Control;
+            this.complatePanel.Controls.Add(this.label2);
+            this.complatePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complatePanel.Location = new System.Drawing.Point(262, 0);
+            this.complatePanel.Name = "complatePanel";
+            this.complatePanel.Size = new System.Drawing.Size(273, 450);
+            this.complatePanel.TabIndex = 1;
             // 
             // label2
             // 
@@ -211,15 +211,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.complatePanel);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.resevePanel);
             this.Name = "TodoForm";
             this.Text = "TodoForm";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.resevePanel.ResumeLayout(false);
+            this.resevePanel.PerformLayout();
+            this.complatePanel.ResumeLayout(false);
+            this.complatePanel.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -228,8 +228,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel resevePanel;
+        private System.Windows.Forms.Panel complatePanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;

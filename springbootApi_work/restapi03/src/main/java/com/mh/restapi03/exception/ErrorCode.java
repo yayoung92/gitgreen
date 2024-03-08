@@ -8,8 +8,9 @@ import org.springframework.http.HttpStatus;
 public enum ErrorCode {
     // 이렇게 적으니까 클래스 전체의 빨간줄 없어짐
     DUPLICATE(HttpStatus.BAD_REQUEST,"A001","중복된 내용이 있습니다."),
-    NOTFOUND(HttpStatus.NOT_FOUND, "B001","내용이 없습니다."),
-    TEST(HttpStatus.BAD_GATEWAY, "C001","테스트중입니다..")
+    NOTFOUND(HttpStatus.NOT_FOUND, "B001","찾을 수 없습니다."),
+    TEST(HttpStatus.BAD_GATEWAY, "C001","테스트중입니다.."),
+    NOTUPDATE(HttpStatus.NOT_FOUND, "NOTUPDATE","수정할내용이 없습니다.")
     ;
     private HttpStatus httpStatus;
 

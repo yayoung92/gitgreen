@@ -34,3 +34,23 @@ select users_idx from todo minus select idx from users;
 
 INSERT INTO TODO(IDX, USERS_IDX, TITLE, CONTENT, FINISHDATE)
 VALUES (todoIdx.nextval, 42, 'test', 'contentdd', sysdate);
+
+
+select * from todo order by idx desc;
+select * from users;
+
+select * from todo a, users b
+where a.users_idx = b.idx;
+
+select * from todo a
+left outer join users b on a.users_idx = b.idx;
+
+select a.idx, a.title, a.content, a.finishdate, b.name from todo a, users b
+where a.users_idx = b.idx and a.status is null;
+
+UPDATE todo SET STATUS = 'C' 
+WHERE idx = '38';
+
+
+
+
