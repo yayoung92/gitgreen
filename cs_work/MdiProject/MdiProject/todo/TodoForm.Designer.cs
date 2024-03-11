@@ -71,6 +71,7 @@
             // 
             // complatePanel
             // 
+            this.complatePanel.AutoScroll = true;
             this.complatePanel.BackColor = System.Drawing.SystemColors.Control;
             this.complatePanel.Controls.Add(this.label2);
             this.complatePanel.Dock = System.Windows.Forms.DockStyle.Fill;

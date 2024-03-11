@@ -57,6 +57,7 @@ namespace MdiProject.todo
 
             //resevePanel.Controls.Clear(); // panel 안의 내용 삭제하고 todoSelect 하기
             todoSelect();
+            todoSelectComplete();
         }
         public void todoSelect()
         {
@@ -69,7 +70,6 @@ namespace MdiProject.todo
 
             foreach (DataRow row in dataTable.Rows)
             {
-
                 int idx = int.Parse(row["idx"].ToString());
                 string title = row["title"].ToString();
                 string content = row["content"].ToString();
@@ -95,7 +95,7 @@ namespace MdiProject.todo
         {
             complatePanel.Controls.Clear();
 
-            DataTable dataTable = todoDBManager.select();
+            DataTable dataTable = todoDBManager.select("C");
 
             int y = 66;
             int evenOdd = 1;
@@ -118,7 +118,7 @@ namespace MdiProject.todo
                 todo.finishdate = finishdate;
                 todo.name = row["name"].ToString();
 
-                makeTodoPanel(12, y, todo, evenOdd % 2);
+                makeTodoPanel(12, y, todo, evenOdd % 2, "centerPanel");
                 evenOdd += 1;
                 y += 200;
             }
@@ -143,7 +143,7 @@ namespace MdiProject.todo
             }
 
         }
-        private void makeTodoPanel(int x, int y, Todo todo, int evenOdd)
+        private void makeTodoPanel(int x, int y, Todo todo, int evenOdd, string panel= "resevePanel")
         {
             #region Panel 화면 구현
 
@@ -248,19 +248,25 @@ namespace MdiProject.todo
             panel4.TabIndex = 1;
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
-
-            this.resevePanel.Controls.Add(panel4);
-
-            // panel 의 예약 이라는 label 도 같이 없어져서 임의로 넣었다,.
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("함초롬돋움", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(24, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "예약";
-
-            this.resevePanel.Controls.Add(this.label1);
+           
+            if (panel.Equals("resevePanel"))
+            {              
+                // panel 의 예약 이라는 label 도 같이 없어져서 임의로 넣었다,.
+                this.label1.AutoSize = true;
+                this.label1.Font = new System.Drawing.Font("함초롬돋움", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+                this.label1.Location = new System.Drawing.Point(24, 20);
+                this.label1.Name = "label1";
+                this.label1.Size = new System.Drawing.Size(60, 32);
+                this.label1.TabIndex = 0;
+                this.label1.Text = "예약";
+                this.resevePanel.Controls.Add(panel4);
+                this.resevePanel.Controls.Add(this.label1);
+            }
+            else
+            {
+                this.complatePanel.Controls.Add(panel4);
+                this.complatePanel.Controls.Add(this.label2);
+            }            
             #endregion
         }
 
@@ -268,12 +274,13 @@ namespace MdiProject.todo
         {
             //형변환해주고
             CheckBox cb = sender as CheckBox;
-            MessageBox.Show(cb.Tag.ToString());
+            //MessageBox.Show(cb.Tag.ToString());
             bool result = todoDBManager.update(cb.Tag.ToString());
             if(result)
             {
-                MessageBox.Show("완료");
+                MessageBox.Show("완료처리 하였습니다.");
                 todoSelect();
+                todoSelectComplete();
             }
             else
             {
