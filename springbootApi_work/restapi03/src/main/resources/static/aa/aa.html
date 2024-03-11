@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // 네트워크 환경에 따라서 늦게 들어올 수도 있다.
+        //await fetch("http://localhost:8081/users")
+
+        fetch("http://localhost:8080/users")
+            .then(res =>{
+                return res.json();
+            })
+            .then(data=>{
+                console.log(data);
+            })
+    </script>
+</head>
+<body>
+    <h1>aa.html</h1>
+</body>
+</html>

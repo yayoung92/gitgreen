@@ -1,6 +1,7 @@
 package com.mh.restapi03.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,13 +14,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Table(name = "users")  // 없으면 자동으로 User 테이블이 생성되는데 테이블 이름 users 로 할거야
 @Entity  // 이 클래스가 테이블이다!!
+@Schema(description = "User Table 에 대한 내용입니다.")
 public class User {
 
+    // SEQUENCE -> 테이블을 생성해서 기본키 관리  GenerationType.SEQUENCE
+    // IDENTITY -> auto-increment 로 자동증가 GenerationType.IDENTITY
     @Id         // id 로 지정
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)  // 자동증가 컬럼이야
+    @GeneratedValue(strategy = GenerationType.IDENTITY)  // 자동증가 컬럼이야
+    @Schema(title = "사용자 ID",description = "table 에서 자동으로 생성되는 컬럼")
     private Long id;
 
     @Column(length = 50)  // Column 으로 문자열 길이 바꿀 수 있다.
+    @Schema(title = "사용자 username",description = "사용자 이름을 넣어주시면 됩니다.")
     private String username;
 
     @Column(length = 100, unique = true) // unique = true 이메일 중복나면 실패한다는 제약조건

@@ -1,6 +1,7 @@
 package com.mh.restapi03.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -15,6 +16,7 @@ import java.time.LocalDateTime;
 @Data
 @ToString
 @AllArgsConstructor
+@Schema(description = "UserDTO 에 대한 내용입니다.")
 public class UserDTO {
     private Long id;
     @NotBlank   // username 빈값 두지 않겠드아.

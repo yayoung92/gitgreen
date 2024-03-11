@@ -2,9 +2,16 @@ package com.mh.restapi03.users;
 
 import com.mh.restapi03.exception.ErrorCode;
 import com.mh.restapi03.exception.UsersException;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.data.repository.query.Param;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +21,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@Tag(name = "User-Controller", description = "유저 조회 등록 수정 삭제")
 public class UserController {
     /*
     get 사용자 조회
@@ -23,6 +31,13 @@ public class UserController {
      */
     private final UserService userService;
 
+    @Operation(summary = "사용자 전체 목록보기",description = "사용자 전체 전보를 조회 할 수 있습니다.")
+    @ApiResponses(
+            {
+                    @ApiResponse(responseCode = "200", description = "OK"),
+                    @ApiResponse(responseCode = "404", description = "사용자들이 없을 때 나오는 코드")
+            }
+    )
     @GetMapping("users")
     public ResponseEntity<List<User>> getAllUsers(){
         List<User> list = userService.getAllUsers();
@@ -33,6 +48,12 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
     @GetMapping("users/{id}")
+    @Operation(summary = "사용자 한명 보기", description = "사용자 한명의 정보를 조회 할 수 있습니다.")
+    @Parameters(
+            @Parameter( description = "조회하고자 하는 사용자 ID 를 입력하세요",
+            name = "id",
+            required = true)
+    )
     public ResponseEntity<User> getUserById(@PathVariable Long id){
         System.out.println(id);
 

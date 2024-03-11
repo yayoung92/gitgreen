@@ -51,6 +51,8 @@ where a.users_idx = b.idx and a.status is null;
 UPDATE todo SET STATUS = 'C' 
 WHERE idx = '38';
 
+commit;
+select * from todo;
 
 
 

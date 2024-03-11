@@ -11,3 +11,6 @@ UPDATE WORD
 SET DELETE_YN = UPPER(DELETE_YN);
 
 commit;
+
+SELECT word, word_mean,insert_date FROM word WHERE category LIKE 'CT1%' ORDER BY insert_date DESC;
+
