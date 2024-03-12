@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
@@ -21,23 +22,18 @@ public class UserDTO {
     private Long id;
     @NotBlank   // username 빈값 두지 않겠드아.
     private String username;
-    //@Min(10)  // 최소 10자리 이상 되어야 한다는 유효성 검사
+
+    @Size(min=5, max=50)
     private String email;
-    //@Min(5)
     private String password;
+    //@Min(10)  // 최소 10자리 이상 되어야 한다는 유효성 검사
+
+    //@Min(5)
+
     //@NotNull
     private Gender gender;
     @JsonFormat(pattern = "yyy/MM/dd HH:mm:ss")
     private LocalDateTime wdate;
 
-//    public static User of(UserDTO userDTO){
-//        User user = new User();
-//        user.setId(userDTO.getId());
-//        user.setUsername(userDTO.getUsername());
-//        user.setEmail(userDTO.getEmail());
-//        user.setPassword(userDTO.getPassword());
-//        user.setGender(userDTO.getGender());
-//        user.setWdate(LocalDateTime.now());
-//        return user;
-//    }
+
 }

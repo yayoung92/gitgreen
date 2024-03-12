@@ -54,5 +54,8 @@ WHERE idx = '38';
 commit;
 select * from todo;
 
-
+select a.idx, a.title, a.content, a.finishdate, b.name
+from todo a, users b
+where a.users_idx = b.idx and a.status ='C'
+order by a.idx desc;
 

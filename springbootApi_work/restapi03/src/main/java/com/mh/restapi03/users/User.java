@@ -1,6 +1,7 @@
 package com.mh.restapi03.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
@@ -31,6 +32,7 @@ public class User {
     @Column(length = 100, unique = true) // unique = true 이메일 중복나면 실패한다는 제약조건
     private String email;
 
+    @JsonIgnore
     private String password;
 
     //@Enumerated(EnumType.ORDINAL)  // enum 순서대로 0,1,2.. 이렇게 숫자로 넣는거

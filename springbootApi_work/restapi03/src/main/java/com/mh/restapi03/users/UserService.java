@@ -20,10 +20,9 @@ public class UserService {
 
         User emailuser = userRepository.findByEmail(user.getEmail());
         if(emailuser != null){
-            System.out.println(user.getEmail() + " 중복 이메일이 있습니다.");
             //throw new LogException(ErrorCode.DUPLICATE);  // ErrorCode 클래스의 HttpStatus.BAD_REQUEST,"A001","중복된 내용이 있습니다." 들어가는거임
             //throw new LogException(ErrorCode.NOTFOUND);  // HttpStatus.NOT_FOUND, "B001","내용이 없습니다."
-            throw new LogicException(ErrorCode.TEST);
+            throw new LogicException(ErrorCode.DUPLICATE);
         }
 
         // insert 구문 실행
@@ -59,5 +58,19 @@ public class UserService {
 
         User dbUser = userRepository.save(user);
         return dbUser;
+    }
+
+    public void delete(Long id) {
+        // 해당되는 아이디가 있으면 삭제해야함.
+        // 해당되는 아이디가 없으면 삭제할 유저가 없다고 알려주야함
+        Optional<User> dbUser = userRepository.findById(id);
+        if(dbUser.isEmpty()){
+            throw new UsersException(ErrorCode.NOTFOUND); //삭제할 유저가 없다는 이야기
+        }
+        userRepository.delete(dbUser.get());
+    }
+
+    public void deleteAll(){
+        userRepository.deleteAll();
     }
 }

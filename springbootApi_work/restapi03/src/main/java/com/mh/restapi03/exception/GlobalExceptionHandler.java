@@ -1,9 +1,15 @@
 package com.mh.restapi03.exception;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindException;
+import org.springframework.validation.method.MethodValidationException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.time.LocalDateTime;
@@ -30,5 +36,29 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {  //
                 .build();
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorResponse);
+    }
+
+    // @ExceptionHandler(BindException.class)  // = validException 이랑 같다.
+
+    @Override
+    protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+                                                                  HttpHeaders headers, 
+                                                                  HttpStatusCode status, 
+                                                                  WebRequest request) {
+        System.out.println("유효성 getMessage " + ex.getMessage());
+        System.out.println("유효성 getBindingResult " + ex.getBindingResult());
+
+//        System.out.println("유효성 실패22" + headers.get("aa"));
+//        System.out.println("유효성 실패22" + status);
+//        System.out.println("유효성 실패22" + request);
+
+        ErrorResponse errorResponse = ErrorResponse
+                                        .builder()
+                                        .errorCode(HttpStatus.BAD_REQUEST.toString())
+                                        .errorMessage(ex.getBindingResult().toString())
+                                        .errorDateTime(LocalDateTime.now())
+                                        .build();
+
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
 }
