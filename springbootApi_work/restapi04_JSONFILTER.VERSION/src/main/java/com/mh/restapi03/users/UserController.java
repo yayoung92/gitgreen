@@ -22,6 +22,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
+@RequestMapping("/users")
 @Tag(name = "User-Controller", description = "유저 조회 등록 수정 삭제")
 public class UserController {
     /*
@@ -41,7 +42,7 @@ public class UserController {
                     @ApiResponse(responseCode = "404", description = "사용자들이 없을 때 나오는 코드")
             }
     )
-    @GetMapping("users")
+    @GetMapping()
     public ResponseEntity<List<User>> getAllUsers(){
         List<User> list = userService.getAllUsers();
         if(list.size()==0){
@@ -50,7 +51,7 @@ public class UserController {
         //return ResponseEntity.ok(list);  // 같은 방식
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
-    @GetMapping("users/{id}")
+    @GetMapping("{id}")
     @Operation(summary = "사용자 한명 보기", description = "사용자 한명의 정보를 조회 할 수 있습니다.")
     @Parameters(
             @Parameter( description = "조회하고자 하는 사용자 ID 를 입력하세요",
@@ -64,7 +65,7 @@ public class UserController {
 
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
-    @PostMapping("users")
+    @PostMapping()
     public ResponseEntity<User> addUser(@RequestBody @Valid UserDTO userDTO){
         userDTO.setWdate(LocalDateTime.now());
 
@@ -76,7 +77,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.CREATED).body(dbUser);
     }
 
-    @PutMapping("users")
+    @PutMapping()
     public ResponseEntity<User> updateUser(@RequestBody @Valid UserDTO userDTO){
         ModelMapper mapper = new ModelMapper();
         User user = mapper.map(userDTO, User.class);
@@ -87,14 +88,14 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.ACCEPTED).body(dbUser);
     }
 
-    @DeleteMapping("users/{id}")
+    @DeleteMapping("{id}")
     public ResponseEntity<String> deleteUser(@PathVariable Long id){
         userService.delete(id);
 
         return ResponseEntity.status(HttpStatus.ACCEPTED).body("삭제됨");
     }
 
-    @DeleteMapping("users/all")
+    @DeleteMapping("all")
     public ResponseEntity<String> deleteUserAll(){
         userService.deleteAll();
         
@@ -102,7 +103,7 @@ public class UserController {
     }
     //@Transactional  // 영속성에 의해서 setter 메서드 사용시  dbUpdate 실행됨
     @Transactional(readOnly = true)  // 무분별한 세터메서드를 사용해도 된다.
-    @GetMapping("users/tran")
+    @GetMapping("tran")
     public String userstran(){
         // Optional<User> dbUser = userRepository.findById(1L).orElseThrow();
         User dbUser = userRepository.findById(1L).orElseThrow();
