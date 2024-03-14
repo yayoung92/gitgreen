@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(SKpMHBS40kmVRYclv5MMLNm3YnUryBqWtE1WL/Di/NPeR9iLTRUo6jh0s5qCJ/3+cAu2DpMLelnH+WefiDDStF28zjxAbSoFXO6BhMiJtjG7VgvKg+9pDNe6m82wJYVJHum8VqZw8ZBFGO1mPxK+Qq7vghCajWBBssV0UxJNBac=)
+    username: ENC(mhK5ce6a+JcN7xH3OXhnng==)
+    password: ENC(+uIb2nEDaKmd1Qlh6cvSpA==)
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  sql:
+    init:
+      mode: always
+
+jasypt:
+  encryptor:
+    password: ${password}

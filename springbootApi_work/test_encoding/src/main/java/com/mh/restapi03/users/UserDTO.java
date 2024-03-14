@@ -2,7 +2,10 @@ package com.mh.restapi03.users;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
@@ -18,7 +21,6 @@ import java.time.LocalDateTime;
 public class UserDTO {
     private Long id;
     @NotBlank   // username 빈값 두지 않겠드아.
-    @Pattern(regexp = "^[a-zA-Z0-9]*$", message = "사용자이름은 영어랑 숫자만 가능합니다.")
     private String username;
 
     @Size(min=5, max=50)
