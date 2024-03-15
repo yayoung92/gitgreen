@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 public class UserDTO {
     private Long id;
     @NotBlank   // username 빈값 두지 않겠드아.
-    @Pattern(regexp = "^[a-zA-Z0-9]*$", message = "사용자이름은 영어랑 숫자만 가능합니다.")
+    //@Pattern(regexp = "^[a-zA-Z0-9]*$", message = "사용자이름은 영어랑 숫자만 가능합니다.")
     private String username;
 
     @Size(min=5, max=50)

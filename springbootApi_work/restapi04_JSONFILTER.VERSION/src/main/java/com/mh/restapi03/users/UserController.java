@@ -12,6 +12,8 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.data.repository.query.Param;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.annotation.Transactional;
@@ -72,7 +74,7 @@ public class UserController {
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
     @PostMapping()
-    public ResponseEntity<User> addUser(@RequestBody @Valid UserDTO userDTO){
+    public EntityModel<User> addUser(@RequestBody @Valid UserDTO userDTO){
         userDTO.setWdate(LocalDateTime.now());
 
         ModelMapper mapper = new ModelMapper();
@@ -80,7 +82,15 @@ public class UserController {
 
         User dbUser = userService.regist(user);
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(dbUser);
+        EntityModel<User> entityModel = EntityModel.of(dbUser);
+        entityModel.add(
+                WebMvcLinkBuilder.linkTo(UserController.class)
+                     //   .slash("/users")
+                        .slash(dbUser.getId())
+                        .withSelfRel()
+        );
+
+        return entityModel;
     }
 
     @PutMapping()
