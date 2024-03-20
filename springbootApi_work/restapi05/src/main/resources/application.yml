@@ -22,6 +22,9 @@ spring:
     init:
       mode: always
 
+  jwt:
+    secret: ygy1234ygy1234sdfkewurhsdkfwuheruyqhfsjhdfwehk
+
 jasypt:
   encryptor:
     password: ${PASSWORD}
