@@ -5,6 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,11 @@ import org.springframework.web.bind.annotation.*;
 public class MemberController {
     private final MemberService memberService;
     @GetMapping()
-    public String member(){
-        return "member";
+    public String member(Authentication authentication){
+        Member member = (Member) authentication.getPrincipal();
+        return "getMember email = " + member.getEmail() +
+                " : username : " + member.getUsername() +
+                " : role : " + member.getRole();
     }
 
     @PostMapping()
