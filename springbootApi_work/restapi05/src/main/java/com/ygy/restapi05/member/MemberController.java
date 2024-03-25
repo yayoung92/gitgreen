@@ -4,10 +4,14 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.BeanUtils;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/member")
@@ -22,16 +26,20 @@ public class MemberController {
                 " : role : " + member.getRole();
     }
 
-    @PostMapping()
-    public String member(@Valid @RequestBody MemberDTO memberDTO){
+    @PostMapping("join")
+    public ResponseEntity<String> member(@Valid @RequestBody MemberDTO memberDTO){
         System.out.println(memberDTO);
-
-        Member member = new Member();
-        BeanUtils.copyProperties(memberDTO, member);
+        ModelMapper modelMapper = new ModelMapper();
+        Member member = modelMapper.map(memberDTO, Member.class);
 
         System.out.println("member : " + member);
         memberService.save(member);
 
-        return "memberdto";
+        return ResponseEntity.status(HttpStatus.OK).body("회원가입 성공");
+    }
+    @GetMapping("list")
+    public ResponseEntity<List<Member>> member(){
+        List<Member> allMembers = memberService.getAllMembers();
+        return ResponseEntity.status(HttpStatus.OK).body(allMembers);
     }
 }

@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,13 +26,13 @@ public class TokenController {
         return "loginTest";
     }
 
-    @GetMapping("/token")
+    @PostMapping("/token")
     public String token(@RequestBody TokenDTO tokenDTO){
         System.out.println("email = " + tokenDTO.getEmail());
         System.out.println("password = " + tokenDTO.getPassword());
         Member dbmember = memberRepository.findByEmailAndPassword(tokenDTO.getEmail(), tokenDTO.getPassword());
         if(dbmember == null){
-            throw new RuntimeException("인증안됨");
+            throw new RuntimeException("회원가입이 안되어있습니다.");
         }
         return tokenManager.generateToken(dbmember);
     }
